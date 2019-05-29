@@ -1,0 +1,203 @@
+body {	
+	background-image: url('./images/corkboard.jpg');
+	/* image originally taken from: */ // background-image: url('https://previews.123rf.com/images/leungchopan/leungchopan1506/leungchopan150600626/41731819-cork-board-background.jpg');
+	background-size: cover;
+	padding: 1%;
+	height: 100%;
+    margin: 0;
+	box-sizing: border-box;
+}
+
+#corkboard-container {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	height: 65%;
+	position: relative;
+}
+
+#heading-container {
+	font-family: 'Rock Salt', serif;
+	font-size: 50px;
+	padding: 0;
+	text-align: center;
+	text-shadow: 2px 2px 8px #FF0000;
+	color: silver;
+	display: block;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	position: relative;
+	
+	-webkit-animation: glow 2s ease-in-out infinite alternate;
+	-moz-animation: glow 2s ease-in-out infinite alternate;
+	animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #cc0066, 0 0 40px #cc0066, 0 0 50px #cc0066, 0 0 60px #cc0066, 0 0 70px #cc0066;
+		// color: #ff99ff; /* sort of pink */
+		color: #c0c0c0; /* silver */
+	}
+	to {
+		text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+		color: #ffffff; /* white */
+	}
+}
+
+#ntbook-container {
+	padding-top: 15px;
+	padding-bottom: 13px;
+	background-image: url('././images/notebook.png');
+	/* image originally taken from: */ // background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9Ti18_Wy81Kc47XXMWJqV3y0oud9wJsayTyCxcwCS7CWBW4JfA');	
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	height: auto;
+}
+
+#task-text {
+	padding: 10px;
+	margin-top: 4px;
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	font-family: Comic Sans MS;
+	background-color: #ffffe6;
+	color: orange;
+	border: 2px solid silver;
+	height: 46px;
+}
+
+#task-due-date {
+	padding: 2px;
+	margin-right: 100px;
+	border-radius: 4px;
+}
+
+#task-due-time {
+	padding: 2px;
+	border-radius: 4px;
+}
+
+
+.required-indication {
+	color: red;
+	font-size: 18px;
+}
+
+.float-to-right {
+	color: red;
+	float: right;
+}
+
+label {
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 2px 2px 2px #129bed;
+	font-size: 18px;
+}
+
+label[for=task-due-date] {
+	margin-top: 15px;
+	margin-right: 165px;
+}
+
+label[for=task-due-time].tune-right {
+	margin-left: 7px;
+}
+
+#buttons {
+	margin-bottom: 6px;
+}
+
+#save-task-button {
+	margin-left: 20px;
+}
+
+#clear-input-fields-button {
+	margin-left: 20px;
+}
+
+#notes-container {
+	padding-top: 40px;
+	padding-left: 14px;
+	width: 100%;
+	height: 280px;
+	position: relative;
+}
+
+.note {
+	margin-left: 2px;
+	margin-bottom: 0.8%;
+	margin-top: 3px;
+	margin-right: 0.5%;
+	width: 169px;
+	height: 180px;
+	display: inline-block;
+	position: relative;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+}
+@Keyframes fadeInOpacity {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.note-txtarea {
+	position: absolute;
+	top: 15px;
+	left: 1px;
+	opacity: 1;
+	color: purple;
+	font-weight: bold;
+	text-shadow: 0 0 3px #00ff00, 0 0 5px #0f00ff;
+	font-family: Comic Sans MS;
+	font-size: 20px;
+	border: none;
+	border-color: Transparent;
+	overflow: auto;
+	outline: none;
+	box-shadow: none;
+	resize: none;
+	max-width: 93%;
+	max-height: 57%;
+	padding-left: 15px;
+	margin-top: 18px;
+	background: transparent;
+}
+
+p.timestamp {
+	position: absolute;
+	top: 183px;
+	opacity: 1;
+	font-weight: bold;
+	margin-top: -45px;
+	margin-left: 15px;
+}
+
+.delete-note-icon {
+	width: 1px;
+	height: 1px;
+	position: absolute!important; 
+	color: red;	
+	cursor: default;
+	top: 16px!important;
+	left: 143px;
+}
+
+.delete-note-icon .visible {
+	visibility: visible;
+}
+
+.delete-note-icon .hidden {
+	visibility: hidden;
+}

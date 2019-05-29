@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Shai's Taskboard</title>
+		
+		<link rel="stylesheet" href="./styles.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<body onload="loadStorage()">
+		<main>
+			<div id="corkboard-container" class="container-fluid">
+				<div id="heading-container">My Task Board</div>
+				<div id="ntbook-container" class="container">
+					<div id="task-data-container" class="form-group">
+						<label for="task-text" id="task-text-lbl">New Task<span id="s1" class="required-indication">*</span>:</label>
+						<span id="s2" class="float-to-right">* required field</span><br/>
+						<input id="task-text" type="text" class="form-control" placeholder="Type your next task here..." required oninput="updateRequiredFieldsDisplay()"/>
+						<label for="task-due-date">Due Date<span id="s3" class="required-indication">*</span>: </label>
+						<label for="task-due-time" id="tsk-due-time-lbl">Due Time:</label><br/>
+						<input id="task-due-date" type="date" required oninput="updateRequiredFieldsDisplay()"/>
+						<input id="task-due-time" type="time"/>
+					</div>
+					<div id="buttons">
+						<button id="clear-storage" class="btn btn-danger" onclick="clearStorage()">Clear Storage!</button>
+						<button id="clear-input-fields-button" class="btn btn-info" onclick="clearInputFields()">Clear Fields!</button>
+						<button id="save-task-button" class="btn btn-success" onclick="addTaskFromClick()">Save Task!</button>
+					</div>
+				</div>
+				<div id="notes-container">
+				
+				</div>
+			</div>
+		</main>
+	</body>
+	
+	<script src="./main.js"></script>
+	
+</html>
